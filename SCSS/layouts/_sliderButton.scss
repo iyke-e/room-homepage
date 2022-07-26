@@ -1,0 +1,37 @@
+@use "../utils/" as *;
+.slider__buttons {
+    display: flex;
+    position: absolute;
+    top: -4em;
+    right: 0;
+    @include breakpoint(medium) {
+        top: -5em;
+    }
+    @include breakpoint(large) {
+        bottom: 0;
+        left: 0;
+        top: initial;
+    }
+    div {
+        display: grid;
+        place-content: center;
+        background-color: var(--Black);
+        width: 4em;
+        height: 4em;
+        transition: 200ms ease-in-out;
+        img {
+            width: 1.3em;
+        }
+        &:hover {
+            background-color: var(--Very-Dark-Gray);
+        }
+        @include breakpoint(medium) {
+            width: 6em;
+            height: 5em;
+        }
+        @include breakpoint(large) {
+            width: 5vw;
+            height: 4.5vw;
+        }
+    }
+}

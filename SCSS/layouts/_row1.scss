@@ -1,0 +1,8 @@
+@use "../utils/" as *;
+.top-row {
+    display: grid;
+    width: 100vw;
+    @include breakpoint(large) {
+        grid-template-columns: 60% 40%;
+    }
+}

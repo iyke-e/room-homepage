@@ -1,0 +1,392 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "League Spartan", sans-serif;
+}
+
+body {
+  width: 100vw;
+}
+
+.fixed {
+  position: fixed;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+:root {
+  --Dark-Gray: hsl(0, 0%, 63%);
+  --Black: hsl(0, 0%, 0%);
+  --White: hsl(0, 0%, 100%);
+  --Very-Dark-Gray: hsl(0, 0%, 27%);
+}
+
+h1 {
+  font-size: 33px;
+  width: 300px;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+@media (min-width: 71.875em) {
+  h1 {
+    font-size: max(3vw, 30px);
+    width: 100%;
+  }
+}
+
+h2 {
+  font-size: 28px;
+  padding-bottom: 0.8em;
+}
+
+h4 {
+  padding-top: 2em;
+  font-size: 14px;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+h4::after {
+  content: url(/images/icon-arrow.svg);
+}
+@media (min-width: 71.875em) {
+  h4 {
+    padding-bottom: 2em;
+  }
+}
+
+p {
+  font-size: 16px;
+  color: var(--Dark-Gray);
+  line-height: 1.5;
+}
+@media (min-width: 71.875em) {
+  p {
+    font-style: 12px;
+  }
+}
+
+.top-row {
+  display: grid;
+  width: 100vw;
+}
+@media (min-width: 71.875em) {
+  .top-row {
+    grid-template-columns: 60% 40%;
+  }
+}
+
+.slider__image {
+  position: relative;
+}
+.slider__image__container {
+  display: block;
+  width: 100%;
+  position: relative;
+  height: 50vh;
+}
+@media (min-width: 40em) {
+  .slider__image__container {
+    height: max(60vh, 320px);
+  }
+}
+@media (min-width: 71.875em) {
+  .slider__image__container {
+    height: 60vh;
+  }
+}
+.slider__image .image {
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  height: 50vh;
+  opacity: 0;
+}
+@media (min-width: 40em) {
+  .slider__image .image {
+    height: max(60vh, 320px);
+  }
+}
+@media (min-width: 71.875em) {
+  .slider__image .image {
+    height: max(60vh, 380px);
+  }
+}
+.slider__image .imgage1 {
+  background-image: url(/images/mobile-image-hero-1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+@media (min-width: 40em) {
+  .slider__image .imgage1 {
+    background-image: url(/images/desktop-image-hero-1.jpg);
+  }
+}
+@media (min-width: 71.875em) {
+  .slider__image .imgage1 {
+    background-image: url(/images/desktop-image-hero-1.jpg);
+  }
+}
+.slider__image .image2 {
+  background-image: url(/images/mobile-image-hero-2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+@media (min-width: 40em) {
+  .slider__image .image2 {
+    background-image: url(/images/desktop-image-hero-2.jpg);
+  }
+}
+@media (min-width: 71.875em) {
+  .slider__image .image2 {
+    background-image: url(/images/desktop-image-hero-2.jpg);
+  }
+}
+.slider__image .image3 {
+  background-image: url(/images/mobile-image-hero-3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+@media (min-width: 40em) {
+  .slider__image .image3 {
+    background-image: url(/images/desktop-image-hero-3.jpg);
+  }
+}
+@media (min-width: 71.875em) {
+  .slider__image .image3 {
+    background-image: url(/images/desktop-image-hero-3.jpg);
+  }
+}
+.slider__image .active {
+  opacity: 100%;
+}
+
+.slider__text {
+  display: grid;
+  position: relative;
+  width: 100%;
+  height: min(55vh, 35em);
+  margin: 0;
+}
+@media (min-width: 40em) {
+  .slider__text {
+    height: max(30vh, 30em);
+  }
+}
+.slider__text .slidetext {
+  display: grid;
+  height: min(55vh, 35em);
+  position: absolute;
+  place-content: center;
+  opacity: 0;
+  padding: 12% 10%;
+}
+@media (min-width: 40em) {
+  .slider__text .slidetext {
+    height: max(30vh, 30em);
+  }
+}
+@media (min-width: 71.875em) {
+  .slider__text .slidetext {
+    padding: 15% 12%;
+    height: 100%;
+  }
+}
+.slider__text .active {
+  opacity: 1;
+}
+@media (min-width: 71.875em) {
+  .slider__text {
+    place-content: center;
+    padding-inline: 4vw;
+    height: max(380px, 60vh);
+  }
+}
+
+.navigation {
+  width: 100%;
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  top: 0;
+  padding-top: 3em;
+  color: var(--White);
+  font-size: 14px;
+}
+.navigation img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media (min-width: 71.875em) {
+  .navigation {
+    justify-content: flex-start;
+    gap: 4em;
+    margin-inline: 3em;
+  }
+}
+.navigation .openMenu {
+  position: absolute;
+  left: 2em;
+}
+@media (min-width: 71.875em) {
+  .navigation .openMenu {
+    display: none;
+  }
+}
+.navigation .nav-list {
+  display: none;
+  padding-right: 2em;
+  position: absolute;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2.5em;
+  font-size: 14px;
+  width: 100%;
+  height: 7em;
+  color: var(--Black);
+  top: 0;
+  font-weight: 700;
+  background-color: var(--White);
+}
+.navigation .nav-list::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-color: #000;
+  top: 7em;
+  left: 0;
+  opacity: 50%;
+  z-index: 12;
+}
+@media (min-width: 71.875em) {
+  .navigation .nav-list {
+    display: flex;
+    gap: 3em;
+    background-color: transparent;
+    color: var(--White);
+    justify-content: flex-start;
+    position: relative;
+    height: auto;
+  }
+  .navigation .nav-list::before {
+    content: none;
+  }
+}
+.navigation .nav-list .closeMenu {
+  left: 2.5em;
+  position: absolute;
+  transition: all 300ms ease-in;
+}
+@media (min-width: 71.875em) {
+  .navigation .nav-list .closeMenu {
+    display: none;
+  }
+}
+.navigation .activeMenu {
+  display: flex;
+}
+
+.slider__buttons {
+  display: flex;
+  position: absolute;
+  top: -4em;
+  right: 0;
+}
+@media (min-width: 40em) {
+  .slider__buttons {
+    top: -5em;
+  }
+}
+@media (min-width: 71.875em) {
+  .slider__buttons {
+    bottom: 0;
+    left: 0;
+    top: initial;
+  }
+}
+.slider__buttons div {
+  display: grid;
+  place-content: center;
+  background-color: var(--Black);
+  width: 4em;
+  height: 4em;
+  transition: 200ms ease-in-out;
+}
+.slider__buttons div img {
+  width: 1.3em;
+}
+.slider__buttons div:hover {
+  background-color: var(--Very-Dark-Gray);
+}
+@media (min-width: 40em) {
+  .slider__buttons div {
+    width: 6em;
+    height: 5em;
+  }
+}
+@media (min-width: 71.875em) {
+  .slider__buttons div {
+    width: 5vw;
+    height: 4.5vw;
+  }
+}
+
+.bottom-row {
+  display: block;
+}
+.bottom-row img {
+  height: 30vh;
+  width: 100%;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+@media (min-width: 40em) {
+  .bottom-row img {
+    height: 320px;
+  }
+}
+@media (min-width: 71.875em) {
+  .bottom-row {
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    height: 40vh;
+  }
+  .bottom-row img {
+    height: 100%;
+    display: block;
+  }
+}
+.bottom-row .text {
+  padding: 15% 10%;
+}
+@media (min-width: 71.875em) {
+  .bottom-row .text {
+    display: block;
+    padding-block: auto;
+    padding-top: 10%;
+    padding-bottom: 0;
+    padding-inline: 10%;
+  }
+}/*# sourceMappingURL=main.css.map */

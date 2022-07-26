@@ -1,0 +1,33 @@
+@use "../utils/" as *;
+.bottom-row {
+    display: block;
+    img {
+        height: 30vh;
+        width: 100%;
+        display: block;
+        object-fit: cover;
+        object-position: center;
+        @include breakpoint(medium) {
+            height: 320px;
+        }
+    }
+    @include breakpoint(large) {
+        display: grid;
+        grid-template-columns: 30% 40% 30%;
+        height: 40vh;
+        img {
+            height: 100%;
+            display: block;
+        }
+    }
+    .text {
+        padding: 15% 10%;
+        @include breakpoint(large) {
+            display: block;
+            padding-block: auto;
+            padding-top: 10%;
+            padding-bottom: 0;
+            padding-inline: 10%;
+        }
+    }
+}

@@ -1,0 +1,40 @@
+@use "../utils/" as *;
+h1 {
+    font-size: 33px;
+    width: 300px;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    @include breakpoint(large) {
+        font-size: max(3vw, 30px);
+        width: 100%;
+    }
+}
+
+h2 {
+    font-size: 28px;
+    padding-bottom: 0.8em;
+}
+
+h4 {
+    padding-top: 2em;
+    font-size: 14px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    font-weight: 700;
+    &::after {
+        content: url(/images/icon-arrow.svg);
+    }
+    @include breakpoint(large) {
+        padding-bottom: 2em;
+    }
+}
+
+p {
+    font-size: 16px;
+    color: var(--Dark-Gray);
+    line-height: 1.5;
+    @include breakpoint(large) {
+        font-style: 12px;
+    }
+}
